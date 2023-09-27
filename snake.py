@@ -26,6 +26,11 @@ def inside(head):
     "Return True if head inside boundaries."
     return -SCREEN_WIDTH/2 < head.x < SCREEN_WIDTH/2 - 10 and -SCREEN_HEIGHT/2 < head.y < SCREEN_HEIGHT/2 - 10
 
+def move_food():
+    "Move the food to a random position."
+    food.x = randrange(-15, 15) * 10
+    food.y = randrange(-15, 15) * 10
+
 def move():
     "Move snake forward one segment."
     head = snake[-1].copy()
