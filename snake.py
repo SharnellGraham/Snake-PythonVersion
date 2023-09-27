@@ -69,3 +69,15 @@ def setup_screen():
     onkey(lambda: change(-SNAKE_MOVE_DISTANCE, 0), 'Left')
     onkey(lambda: change(0, SNAKE_MOVE_DISTANCE), 'Up')
     onkey(lambda: change(0, -SNAKE_MOVE_DISTANCE), 'Down')
+
+    def square(x, y, size, color):
+    "Draw a square at (x, y) with the given size and color."
+    up()
+    goto(x, y)
+    down()
+    color(color)
+    begin_fill()
+    for _ in range(4):
+        forward(size)
+        right(90)
+    end_fill()
