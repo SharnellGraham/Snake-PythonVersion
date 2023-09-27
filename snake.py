@@ -56,7 +56,7 @@ def move():
 
     square(food.x, food.y, 9, 'green')
     update()
-   ontimer(move, SNAKE_SPEED)
+    ontimer(move, SNAKE_SPEED)
 
 
 def setup_screen():
@@ -71,13 +71,22 @@ def setup_screen():
     onkey(lambda: change(0, -SNAKE_MOVE_DISTANCE), 'Down')
 
     def square(x, y, size, color):
-    "Draw a square at (x, y) with the given size and color."
-    up()
-    goto(x, y)
-    down()
-    color(color)
-    begin_fill()
+        "Draw a square at (x, y) with the given size and color."
+        up()
+        goto(x, y)
+        down()
+        color(color)
+        begin_fill()
     for _ in range(4):
         forward(size)
         right(90)
     end_fill()
+
+    def main():
+        setup_screen()
+        move()
+        move_food()  # Initialize the food position
+        done()
+
+if __name__ == "__main__":
+    main()
