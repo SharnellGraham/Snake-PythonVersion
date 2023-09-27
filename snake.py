@@ -45,8 +45,7 @@ def move():
 
     if head == food:
         print('Snake:', len(snake))
-        food.x = randrange(-15, 15) * 10
-        food.y = randrange(-15, 15) * 10
+        move_food()  # Move the food to a new position
     else:
         snake.pop(0)
 
@@ -57,15 +56,16 @@ def move():
 
     square(food.x, food.y, 9, 'green')
     update()
-    ontimer(move, 100)
+   ontimer(move, SNAKE_SPEED)
 
-    setup(420, 420, 370, 0)
-hideturtle()
-tracer(False)
-listen()
-onkey(lambda: change(10, 0), 'Right')
-onkey(lambda: change(-10, 0), 'Left')
-onkey(lambda: change(0, 10), 'Up')
-onkey(lambda: change(0, -10), 'Down')
-move()
-done()
+
+def setup_screen():
+    "Set up the game screen."
+    setup(SCREEN_WIDTH, SCREEN_HEIGHT)
+    hideturtle()
+    tracer(False)
+    listen()
+    onkey(lambda: change(SNAKE_MOVE_DISTANCE, 0), 'Right')
+    onkey(lambda: change(-SNAKE_MOVE_DISTANCE, 0), 'Left')
+    onkey(lambda: change(0, SNAKE_MOVE_DISTANCE), 'Up')
+    onkey(lambda: change(0, -SNAKE_MOVE_DISTANCE), 'Down')
