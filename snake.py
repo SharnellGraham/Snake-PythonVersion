@@ -5,6 +5,11 @@ from random import randrange
 SCREEN_WIDTH = 400
 SCREEN_HEIGHT = 400
 
+
+# Define constants for snake speed and movement
+SNAKE_SPEED = 100  # Increase or decrease for faster/slower snake
+SNAKE_MOVE_DISTANCE = 10
+
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
