@@ -1,6 +1,9 @@
 from turtle import *
 from random import randrange
-from freegames import square, vector
+
+# Define constants for screen boundaries
+SCREEN_WIDTH = 400
+SCREEN_HEIGHT = 400
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
