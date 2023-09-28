@@ -1,33 +1,49 @@
-Snake Game
-This is a simple implementation of the classic Snake arcade game using Python's Turtle graphics library. You can control the snake using arrow keys and eat the green food while avoiding collisions with the screen boundaries and yourself.
+# Snake Game
 
-How to Use
-Installation: There are no additional libraries required beyond Python's standard libraries. Simply download the Python script, and you're ready to play.
+Welcome to the Snake game, a simple implementation of the classic Snake arcade game using Python's Turtle graphics library. Control the snake using arrow keys, eat green food, and challenge yourself to achieve the highest score while avoiding collisions with the screen boundaries and the snake's own body.
 
-Running the Game:
+## Table of Contents
 
-bash
-```
+- [How to Use](#how-to-use)
+  - [Installation](#installation)
+  - [Running the Game](#running-the-game)
+  - [Game Controls](#game-controls)
+- [Objective](#objective)
+- [Scoring](#scoring)
+- [Customization](#customization)
+- [Additional Features](#additional-features)
+- [Enjoy the Game!](#enjoy-the-game)
+
+## How to Use
+
+### Installation
+
+There are no additional libraries required beyond Python's standard libraries. Simply download the Python script, and you're ready to play.
+
+### Running the Game
+
+To start the game, open your terminal and run the following command:
+
+```bash
 python snake.py
-```
-
-Game Controls:
-
+Game Controls
 Use the Arrow Keys to control the snake's direction:
+
 Up: Move the snake up
 Down: Move the snake down
 Left: Move the snake left
 Right: Move the snake right
-Objective:
+Objective
+The main objective of the game is to eat the green food that appears on the screen to make the snake longer. However, be cautious:
 
-Eat the green food that appears on the screen to make the snake longer.
-Avoid running into the screen boundaries or colliding with the snake's own body, as it will result in a game over.
-Scoring:
-
+Avoid running into the screen boundaries.
+Avoid colliding with the snake's own body, as it will result in a game over.
+Scoring
 The game keeps track of your score, which is the length of the snake. Try to achieve the highest score possible!
-Customization:
 
-You can customize the game by adjusting the constants in the script:
+Customization
+You can customize the game by adjusting the following constants in the script:
+
 SNAKE_SPEED: Controls the speed of the snake. Increase it for a faster game or decrease it for a slower game.
 SNAKE_MOVE_DISTANCE: Controls how far the snake moves in each step.
 Additional Features
