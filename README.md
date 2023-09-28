@@ -1,6 +1,6 @@
 # Snake Game
 
-Welcome to the Snake game, a simple implementation of the classic Snake arcade game using Python's Turtle graphics library. Control the snake using arrow keys, eat green food, and challenge yourself to achieve the highest score while avoiding collisions with the screen boundaries and the snake's own body.
+Welcome to the Snake game, a simple implementation of the classic Snake arcade game using Python's Turtle graphics library. Control the snake using arrow keys, eat green food, and challenge yourself to achieve the highest score while avoiding collisions with the screen boundaries and the snake's own body..
 
 ## Table of Contents
 
