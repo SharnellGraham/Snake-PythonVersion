@@ -1,10 +1,10 @@
 from turtle import *
 from random import randrange
+from freegames import vector
 
 # Define constants for screen boundaries
 SCREEN_WIDTH = 400
 SCREEN_HEIGHT = 400
-
 
 # Define constants for snake speed and movement
 SNAKE_SPEED = 100  # Increase or decrease for faster/slower snake
@@ -58,7 +58,6 @@ def move():
     update()
     ontimer(move, SNAKE_SPEED)
 
-
 def setup_screen():
     "Set up the game screen."
     setup(SCREEN_WIDTH, SCREEN_HEIGHT)
@@ -70,23 +69,24 @@ def setup_screen():
     onkey(lambda: change(0, SNAKE_MOVE_DISTANCE), 'Up')
     onkey(lambda: change(0, -SNAKE_MOVE_DISTANCE), 'Down')
 
-    def square(x, y, size, color):
-        "Draw a square at (x, y) with the given size and color."
-        up()
-        goto(x, y)
-        down()
-        color(color)
-        begin_fill()
+def square(x, y, size, fill_color):
+    "Draw a square at (x, y) with the given size and fill_color."
+    up()
+    goto(x, y)
+    down()
+    color(fill_color)  # Renamed variable to fill_color
+    begin_fill()
     for _ in range(4):
         forward(size)
         right(90)
     end_fill()
 
-    def main():
-        setup_screen()
-        move()
-        move_food()  # Initialize the food position
-        done()
+
+def main():
+    setup_screen()
+    move()
+    move_food()  # Initialize the food position
+    done()
 
 if __name__ == "__main__":
     main()
